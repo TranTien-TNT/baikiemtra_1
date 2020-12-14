@@ -1,0 +1,158 @@
+
+
+            Đề kiểm tra lớp DevOps TNR  
+
+
+
+  
+
+Phần 1: Git, Docker, Jenkins  
+
+  
+
+Câu 1: Lệnh nào để chạy 1 Docker container từ Docker image:  
+
+A  docker run  
+    
+
+Câu 2: Lệnh nào để lấy source code từ remote repo về local repo  
+
+
+C  git clone  
+  
+
+Câu 3: Lệnh nào để khởi tạo 1 local Git repo  
+
+B  git init  
+  
+
+Câu 4: Lệnh nào cho phép chui vào bên trong 1 Docker container  
+
+D  docker exec  
+
+ 
+Câu 5: Option nào dùng để expose cổng 80 của container ra cổng 8000  
+
+C  -p 8000:80  
+
+Câu 6: Lệnh nào dùng để tạo nhánh trong Git  
+
+C  git branch  
+
+Câu 7: Cho project gồm 2 file A và B. Tập lệnh nào để add file A vào  
+
+staging area và commit nó  
+ 
+D  git add A && git commit -m "add file A"  
+
+Câu 8: Lệnh nào để đẩy code từ local repo lên remote repo  
+
+C  git push  
+
+Câu 9  Lệnh nào để khai báo base image node:12-alpine trong Dockerfile  
+
+D  FROM node:12-alpine  
+
+Câu 10  Lệnh nào để tạo Docker Image có tên hello-world từ Dockerfile  
+C  docker build -t hello-world .  
+
+Câu 11  Option nào để tạo mount volume thư mục /db/data của container  
+
+ra thư mục $HOME/data bên ngoài host  
+
+C  -v $HOME/data: /db/data  
+
+Câu 12  Lệnh nào để khởi động các container bằng docker-compose  
+
+B  docker-compose up  
+
+Câu 13  Lệnh nào để tạo 1 docker network  
+
+A  docker network create  
+
+Câu 14  Trong Dockerfile, lệnh nào để copy code từ ngoài host vào bên  
+
+trong image  
+D  COPY  
+
+Câu 15  Lệnh nào liệt kê tất cả các container (đang chạy và đã stop)  
+
+C  docker ps -a  
+
+
+Phần 2: Kubernetes  
+
+Câu 1: Lệnh nào để chạy 1 container từ  1 docker image trên kubernetes:  
+
+A  kubectl run  
+
+Câu 2: Lệnh nào để liệt kê các pod có trên kubernetes  
+
+B  kubectl get pod  
+
+Câu 3: Lệnh nào để triển khai 1 file yaml lên kubernetes  
+
+C  kubectl apply -f <file-name.yaml>  
+
+Câu 4: Để đảm bảo mỗi node chạy duy nhất 1 pod của app A thì app A cần  
+
+triển khai dạng gì?  
+
+C    Daemon Set  
+Câu 5: Đâu KHÔNG phải là 1 loại Service của K8S?  
+C     Ingress  
+
+Câu 6: Đâu là cấu hình đúng của ClusterIP port trong định nghĩa của 1  
+
+Service?  
+
+B  port: 80  
+
+Câu 7: Tiller là 1 thành phần của...  
+
+C    Helm version 2  
+
+
+Câu 8: File gì KHÔNG phải là thành phần của 1 helm chart?  
+
+D    template.json  
+ 
+Câu 9: Thành phần Fluentd trong EFK stack thường được cài đặt dưới  
+
+dạng nào sau đây?  
+                     
+C    Daemon Set  
+
+Câu 10: Để cài đặt grafana lên kubernetes ta có thể sử dụng cách nào?  
+
+A    Cài đặt bằng helm chart  
+ 
+Câu 11: Nếu Persistent Volume tương đương với Node thì Persistent  
+
+Volume Claim trên kubernetes có vai trò tương đương với khái niệm nào  
+
+sau đây?  
+
+B    Storage Class  
+ 
+Câu 12: Stateful Set được sử dụng trong trường hợp nào sau đây là phù  
+
+hợp nhất?  
+
+C    Chạy MongoDB replicaset 3 pod  
+
+Câu 13: Cấu hình triển khai nào dưới đây chắc chắn gây downtime cho  
+
+ứng dụng?  
+
+A    Recreate  
+ 
+Câu 14: SIGKILL sẽ được kubernetes gửi tới Pod khi nào?  
+
+C    Sau khi thời gian config trong terminationGracePeriodSeconds kết thúc  
+
+Câu 15: Nếu Liveness Probe của 1 pod bị fail thì kubernetes sẽ xử lý thế  
+
+nào?  
+C    Restart pod đó  
+

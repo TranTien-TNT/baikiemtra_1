@@ -1,0 +1,20 @@
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - /root/devops/exam/data:/data/db
+    restart: unless-stopped
+  nodejs1:
+    depends_on:
+      - mongodb
+    image: demo-service
+    container_name: nodejs1
+    environment:
+     - MONGODB_URI=mongodb://mongodb:27017/demo
+     - PORT=3000
+    ports:
+     - "8000:3000"
+    restart: unless-stopped

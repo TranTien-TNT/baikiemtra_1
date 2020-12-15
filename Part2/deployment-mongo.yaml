@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: deployment-mongo
   labels:
-    something: mongo-quangdn
+    something: mongo-tient
 spec:
   strategy:
      type: RollingUpdate
@@ -14,13 +14,13 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mongo-quangdn
+      app: mongo-tient
 
   template:
     metadata:
       name: demo-mongo-pod
       labels:
-        app: mongo-quangdn
+        app: mongo-tient
     spec:
       containers:
         - name: mongo-nodea
